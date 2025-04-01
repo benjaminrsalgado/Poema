@@ -7,18 +7,68 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MiPoemaFav: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Titulo()
+            PoemaLineas()
         }
         .padding()
     }
 }
+struct Titulo: View{
+    var body: some View{
+        Text("Whispers of the Moon")
+            .font(.largeTitle)
+            .foregroundColor(.orange)
+    }
+}
+
+struct PoemaLineas: View{
+    var body: some View{
+        VStack{
+            Text("The moonlight spills on silent seas,")
+                .foregroundColor(.blue)
+                .bold()
+                .multilineTextAlignment(.center)
+                .font(.body)
+            Text("A silver hush upon the breeze.")
+                .multilineTextAlignment(.leading)
+                .foregroundColor(.purple)
+                .italic()
+                .font(.body)
+            Text("Stars like secrets gently glow,")
+                .multilineTextAlignment(.trailing)
+                .foregroundColor(.green)
+                .underline()
+                .font(.body)
+            Text("Telling tales we’ll never know.")
+                .multilineTextAlignment(.leading)
+                .foregroundColor(.black)
+                .font(.body)
+            Text("The night is soft, the world is still,")
+                .multilineTextAlignment(.center)
+                .foregroundColor(.red)
+                .font(.body)
+            Text("A lullaby on every hill.")
+                .multilineTextAlignment(.trailing)
+                .foregroundColor(.pink)
+                .underline(true, color: .red)
+                .font(.body)
+            Text("And in the dark, the dreams take flight,")
+                .multilineTextAlignment(.leading)
+                .foregroundColor(.gray)
+                .underline()
+                .font(.body)
+            Text("Carried on wings of velvet night.")
+                .multilineTextAlignment(.trailing)
+                .foregroundColor(.orange)
+                .italic()
+                .font(.body)
+        }
+    }
+}
 
 #Preview {
-    ContentView()
+    MiPoemaFav()
 }
