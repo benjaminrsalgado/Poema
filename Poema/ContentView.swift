@@ -19,7 +19,7 @@ struct MiPoemaFav: View {
 struct Titulo: View{
     var body: some View{
         Text("Whispers of the Moon")
-            .font(.largeTitle)
+            .font(.custom("Bravecho",  size:  20))
             .foregroundColor(.orange)
     }
 }
@@ -31,7 +31,7 @@ struct PoemaLineas: View{
                 .foregroundColor(.blue)
                 .bold()
                 .multilineTextAlignment(.center)
-                .font(.body)
+                .font(.custom("Bravecho",  size:  18))
             Text("A silver hush upon the breeze.")
                 .multilineTextAlignment(.leading)
                 .foregroundColor(.purple)
@@ -66,6 +66,7 @@ struct PoemaLineas: View{
                 .italic()
                 .font(.body)
         }
+        .padding()
     }
 }
 
